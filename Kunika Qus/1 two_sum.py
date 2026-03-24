@@ -47,5 +47,6 @@ class Solution:
             second = target-nums[i]
             if second in m:
                 return i, m[second]
+            m[nums[i]] = i
 
         
