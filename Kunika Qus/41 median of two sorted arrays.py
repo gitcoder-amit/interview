@@ -45,6 +45,7 @@ class Solution:
         
         while j < n2:
             merged.append(arr2[j])
+            j+=1
 
         n = n1+n2
 

@@ -49,7 +49,7 @@ class Trie:
         self.root = TrieNode()
         
 
-    def insert(self, word: str) -> None:
+    def insert(self, word: str) -> None: 
         current = self.root
         for char in word:
             if char not in current.children:

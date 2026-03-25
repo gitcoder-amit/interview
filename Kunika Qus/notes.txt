@@ -1,0 +1,30 @@
+word break problem no 9
+meeting room 2 problem no 15
+problem no 16
+problem No 19
+Problem no 20
+problem no 21
+problem no 28
+problem no 33
+problem no 42
+problem no 43
+problem no 44
+problem no 45
+problem no 47
+problem no 48
+problem no 49
+
+
+always write code for below
+1-10 -> 8, 9, 10
+10-20 -> 13, 14, 16, 17, 18, 19, 20
+
+
+
+problems that I need to solve from scratch
+9, 15, 20, 28, 33, 42, 43, 45, 47, 48, 49
+
+
+all other except above 10 are revisioned properly on daily basis
+
+

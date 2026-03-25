@@ -82,5 +82,7 @@ class Solution:
             pref *= nums[i]
             suff *= nums[len(nums) - 1 - i]
             max_product = max(max_product, pref, suff)
+
+        return max_product
             
             
