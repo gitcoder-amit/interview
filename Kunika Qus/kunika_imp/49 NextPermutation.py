@@ -68,5 +68,5 @@ class Solution:
         if flag:
             self.reverse(nums, start+1, n-1)
         else:
-            self.reverse(nums, start, n-1)
+            self.reverse(nums, 0, n-1)
         

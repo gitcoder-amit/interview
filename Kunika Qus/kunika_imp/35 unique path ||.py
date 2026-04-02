@@ -39,7 +39,7 @@ obstacleGrid[i][j] is 0 or 1.
 
 class Solution:
     def helper(self, i, j, grid, dp):
-        if i >= 0 and j < len(grid[0]) and grid[i][j] == 1:
+        if grid[i][j] == 1:
             return 0
         if i == 0 and j == 0:
             return 1
