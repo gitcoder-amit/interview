@@ -46,8 +46,13 @@ class Solution:
             if num >= 0 and num <= n:
                 visited[num] = True
 
+        #
+        m = {}
+        for num in nums:
+            m[num] = True
+
         for i in range(1, n+1):
-            if not visited[i]:
+            if not visited[i]: # or if i not in m:
                 return i
 
         return n+1

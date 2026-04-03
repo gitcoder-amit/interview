@@ -41,6 +41,7 @@ class Solution:
     def helper(self, i, j, grid, dp):
         if grid[i][j] == 1:
             return 0
+        
         if i == 0 and j == 0:
             return 1
 
