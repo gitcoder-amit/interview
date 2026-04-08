@@ -26,6 +26,30 @@ The list is guaranteed to be sorted in ascending order.
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         # Time Complexity: O(n)
+        # Space Complexity: O(1) due to we are not using any extra space for another linked list, we are modifying the original linked list itself. we are not creating any new nodes, we are just changing the next pointers of the existing nodes.
+        if head is None or head.next is None:
+            return head
+
+        dummy = ListNode(0)
+        prev = dummy
+        curr = head
+
+        while curr:
+            # Check for duplicates
+            if curr.next and curr.val == curr.next.val:
+                # Skip all duplicates
+                while curr.next and curr.val == curr.next.val:
+                    curr = curr.next
+            else:
+                # Move prev pointer if no duplicate
+                prev.next = curr
+                prev = prev.next
+            curr = curr.next
+        prev.next = None
+        return dummy.next
+    
+
+        # Time Complexity: O(n)
         # Space Complexity: O(1)
         dummy = ListNode(0)
         dummy.next = head
@@ -46,3 +70,4 @@ class Solution:
             curr = curr.next
 
         return dummy.next
+

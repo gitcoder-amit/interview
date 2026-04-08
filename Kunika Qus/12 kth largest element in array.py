@@ -35,6 +35,21 @@ class Solution:
         nums.sort()
         return nums[len(nums)-k]
 
+        # Using a Min Heap
+        # Time Complexity: O(n log k)
+        # Space Complexity: O(k)
+        import heapq
+
+        heap = []
+
+        for num in nums:
+            heapq.heappush(heap, num)
+            if len(heap) > k:
+                heapq.heappop(heap)
+        
+        return heap[0]
+    
+
         # using a max heap
         # Time Complexity: O(n log n)
         import heapq
