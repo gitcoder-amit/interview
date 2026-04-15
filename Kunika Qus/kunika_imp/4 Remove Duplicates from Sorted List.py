@@ -37,10 +37,12 @@ class Solution:
             if curr.val != newhead.val:
                 newhead.next = curr
                 newhead = newhead.next
-            curr = curr.next
+                curr = curr.next
+            else:
+                curr = curr.next
 
         newhead.next = None
-        return headNode.next
+        return headNode.next or head
     
         # Optimal Approach
         # Time Complexity: O(n)
