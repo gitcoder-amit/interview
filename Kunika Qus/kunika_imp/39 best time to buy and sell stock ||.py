@@ -74,7 +74,7 @@ class Solution:
         return dp[i][buy]
 
     def maxProfit(self, prices: List[int]) -> int:
-        dp = [[-1 for _ in range(3)] for _ in range(len(prices))]
+        dp = [[-1 for _ in range(2)] for _ in range(len(prices))]
         return self.helper(0, prices, 1, dp)
         
         
