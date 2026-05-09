@@ -48,6 +48,27 @@ class Solution:
             if newr >= 0 and newr < len(grid) and newc >= 0 and newc < len(grid[0]) and grid[newr][newc] == '1' and not vis[newr][newc]:
                 self.dfs(newr, newc, vis, grid, dr,dc)
 
+    # BFS Approach
+    # Time Complexity: O(m*n) for traversing the entire grid once  + O(4*m*n) for BFS calls in worst case
+    # Space Complexity: O(m*n) for visited array and queue
+    def bfs(self, n, m, grid, row, col, vis):
+        from collections import deque
+        dr = [-1, 0, +1, 0]
+        dc = [0, +1, 0, -1]
+        q = deque()
+        q.append([row, col])
+        vis[row][col] = True
+
+        while q:
+            newr, newc = q.popleft()
+            for i in range(4):
+                nr = newr + dr[i]
+                nc = newc + dc[i]
+            
+                if nr >= 0 and nr < n and nc >= 0 and nc < m and not vis[nr][nc] and grid[nr][nc] == '1':
+                    vis[nr][nc] = True
+                    q.append([nr, nc])
+
     def numIslands(self, grid: List[List[str]]) -> int:
         m = len(grid)
         n = len(grid[0])

@@ -51,23 +51,20 @@ class Solution:
 
         # Time Complexity: O(n)
         # Space Complexity: O(1)
-        dummy = ListNode(0)
-        dummy.next = head
-        prev = dummy
         curr = head
+        dummyNode = ListNode(-1)
+        prev = dummyNode
+
 
         while curr:
-            # Check for duplicates
             if curr.next and curr.val == curr.next.val:
-                # Skip all duplicates
                 while curr.next and curr.val == curr.next.val:
                     curr = curr.next
-                # Link previous distinct node to the next distinct node
-                prev.next = curr.next
+                curr = curr.next
             else:
-                # Move prev pointer if no duplicate
+                prev.next = curr
+                curr = curr.next
                 prev = prev.next
-            curr = curr.next
-
-        return dummy.next
+        prev.next = None
+        return dummyNode.next
 

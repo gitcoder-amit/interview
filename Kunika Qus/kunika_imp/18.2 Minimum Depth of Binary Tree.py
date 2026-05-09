@@ -40,9 +40,6 @@ class Solution:
     def minDepth(self, root: Optional[TreeNode]) -> int:
         if root is None:
             return 0
-        
-        if root.left is None and root.right is None:
-            return 1
 
         # lh = sys.maxsize
         # rh = sys.maxsize

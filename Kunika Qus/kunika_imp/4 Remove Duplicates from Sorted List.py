@@ -54,3 +54,16 @@ class Solution:
             else:
                 curr = curr.next
         return head
+
+
+        # Optimal Approach
+        # Time Complexity: O(n)
+        # Space Complexity: O(1)
+        curr = head
+
+        while curr is not None:
+            if curr.next and curr.val == curr.next.val:
+                while curr.next and curr.val == curr.next.val:
+                    curr.next = curr.next.next
+            curr = curr.next
+        return head
