@@ -56,8 +56,8 @@ class Solution:
         i = 0
         j = len(height)-1
 
-        while i < j:
-            if height[i] < height[j]:
+        while i < j: # or i <= j
+            if height[i] < height[j]: # or height[i] <= height[j]
                 currans = height[i]*(j-i)
                 i += 1
             else:
